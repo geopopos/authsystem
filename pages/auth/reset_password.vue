@@ -21,6 +21,16 @@ const fields = [
   },
 ];
 
+const code = `${route.query.code}`;
+try {
+  console.log(code);
+  await client.auth.getSession();
+  await client.auth.exchangeCodeForSession(code);
+  await client.auth.getSession();
+} catch (error) {
+  console.log(error);
+}
+
 const validate = (state: any) => {
   const errors: FormError[] = [];
   if (!state.password)
