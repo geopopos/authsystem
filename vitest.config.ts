@@ -1,16 +1,22 @@
 import {defineConfig} from 'vitest/config'
 import Vue from "@vitejs/plugin-vue"
+import AutoImport from "unplugin-auto-import/vite"
 
 export default defineConfig({
-  plugins: [Vue()],
+  plugins: [
+    Vue(),
+    AutoImport({imports:[
+      'vue', 
+      'vue-router',
+      {
+        'useAuthStore': [
+          ['useAuthStore','stores/auth']
+        ]
+      }
+    ]})
+  ],
   test: {
     globals: true,
+    environment: 'happy-dom'
   }
 })
-// import { defineVitestConfig } from '@nuxt/test-utils/config'
-
-// export default defineVitestConfig({
-//   test: {
-//     environment: 'nuxt',
-//   }
-// });
