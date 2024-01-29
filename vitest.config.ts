@@ -1,20 +1,16 @@
-import { defineConfig } from 'vitest/config';
-import vue from "@vitejs/plugin-vue";
+import {defineConfig} from 'vitest/config'
+import Vue from "@vitejs/plugin-vue"
 
 export default defineConfig({
-    plugins: [vue()],
+  plugins: [Vue()],
   test: {
     globals: true,
-    environment: 'jsdom',
-    setupFiles: ['./tests/unit/setup.ts'], 
-    transformMode: {
-      web: [/.[tj]sx?$/], // Transform both .ts and .js files
-    },
-  },
-  resolve: {
-    alias: {
-      '@': '/src',
-      '~': '/src',
-    },
-  },
-});
+  }
+})
+// import { defineVitestConfig } from '@nuxt/test-utils/config'
+
+// export default defineVitestConfig({
+//   test: {
+//     environment: 'nuxt',
+//   }
+// });
