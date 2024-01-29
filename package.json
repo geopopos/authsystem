@@ -4,17 +4,27 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vitest"
   },
   "devDependencies": {
     "@nuxtjs/supabase": "^1.1.5",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
+    "@types/jest": "^29.5.11",
+    "@vitejs/plugin-vue": "^5.0.3",
+    "@vue/test-utils": "^2.4.4",
+    "jsdom": "^24.0.0",
     "nuxt": "^3.8.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2",
     "vue": "^3.4.14",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vue-router-mock": "^1.0.0",
+    "vue-tsc": "^1.8.27"
   },
   "dependencies": {
     "@nuxt/ui-pro": "^0.7.3",
