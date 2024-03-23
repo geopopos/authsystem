@@ -1,75 +1,37 @@
-# Nuxt 3 Minimal Starter
+# Initial Set Up
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+## Set Up New Repo
+git clone repo
 
-Make sure to install the dependencies:
+`rm -rf .git`
 
-```bash
-# npm
-npm install
+`git add .`
 
-# pnpm
-pnpm install
+`git commit -m "initial commit of oneclickai"`
 
-# yarn
-yarn install
+`git push`
 
-# bun
-bun install
-```
+# initialize supabase
+`supabase init`
+`supabase login`
+`supabase link --project-ref hrhfqydfrkyknzjgivyr --password gMtjPTXUGWt3dJaU`
 
-## Development Server
+# Set up environment variables
+DB_PASSWORD - Your supabase db password
+SUPABASE_URL - your supabase project url
+SUPABASE_KEY - Your Supabase Project Anon Key
+NUXT_UI_PRO_LICENSE - Your Nuxt UI Pro License
+SITE_URL=http://localhost:3000
 
-Start the development server on `http://localhost:3000`:
+# test it out
+`npm run test`
 
-```bash
-# npm
-npm run dev
+# run app and test registration and set up
 
-# pnpm
-pnpm run dev
+`yarn install`
 
-# yarn
-yarn dev
+`yarn run dev`
 
-# bun
-bun run dev
-```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+# happy developing! 🚀
